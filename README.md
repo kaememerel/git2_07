@@ -19,3 +19,6 @@ v.2.0:
 - [x] service for EU or US region and US-21 yrs recognition
 - [x] bonus aperol for adult women
 - [x] max age 120
+
+v.2.1:
+- [x] max age >120 does not exit application
