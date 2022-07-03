@@ -1,15 +1,21 @@
-# Moj projekt w GIT i PY
+# My project in GIT and PY
 
 
-## Aplikacja dla osob pelnoletnich w Pythonie
+## Application for adults ordering alcoholic drinks
 
 
-Funkcjonalnosci aplikacji 
+Application functionalities
 
 v1.0:
-- [x] obsluga osob doroslych
-- [x] obsluga wymagan dla osob +40
+- [x] service for adults
+- [x] service for +40 users
 
 v.1.1:
-- [x] zwiekszenie limitu do 50 lat bez ostrzezenia
-- [x] lepsza obsługa osób osób j/w
+- [x] age limit without warnings +50
+- [x] better service for users +50
+
+v.2.0:
+- [x] translation to English
+- [x] service for EU or US region and US-21 yrs recognition
+- [x] bonus aperol for adult women
+- [x] max age 120

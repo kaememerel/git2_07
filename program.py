@@ -1,12 +1,40 @@
-age = input("Podaj wiek uzytkownika: ")
-# Sprawdzamu, czy wiek jest zlozony z cyfr
-if age.isdigit() == False:
-    exit("Wiek musi byc podany jako liczba")
-age = int(age)
-if age >= 18 and age <= 50:
-    print("Witaj w naszym sklepie z alkoholem")
-elif age > 50:
-    print("Witaj w naszym sklepie z alkoholem")
-    print("W Twoim wieku alkohol jest juz szkodliwy")
+region = input("Select your region (EU/US): ")
+if region == "US":
+    age = input("Write your age: ")
+    if age.isdigit() == False:
+        exit("Age has to be a number!")
+    age = int(age)
+    if age >= 21 and age <= 50:
+        drink = input("Welcome to 'World's Alcohols'. Please, select your drink: ")
+        print(f"You selected {drink}. It will be served within 10 minutes.")
+    elif age > 50 and age <= 120:
+        print("Welcome to 'World's Alcohols'. Please, be reminded that in your age alcoholic drinks are harmful.")
+        drink = input("If you wish to order anyway, please, select your drink: ")
+        print(f"You selected {drink}. It will be served within 10 minutes.")
+    elif age > 120:
+        exit("Come on, your real age. Let's try again.")
+    else:
+        exit("You are too young for alcohol!")
+elif region == "EU":
+    age = input("Write your age: ")
+    if age.isdigit() == False:
+        exit("Age has to be a number!")
+    age = int(age)
+    if age >= 18 and age <= 50:
+        drink = input("Welcome to 'World's Alcohols'. Please, select your drink: ")
+        print(f"You selected {drink}. It will be served within 10 minutes.")
+    elif age > 50 and age <= 120:
+        print("Welcome to 'World's Alcohols'. Please, be reminded that in your age alcoholic drinks are harmful.")
+        drink = input("If you wish to order anyway, please, select your drink: ")
+        print(f"You selected {drink}. It will be served within 10 minutes.")
+    elif age > 120:
+        exit("Come on, your real age. Let's try again.")
+    else:
+        exit("You are too young for alcohol!")
 else:
-    exit("Jestes za mlody na alkohol!")
+    exit("You can only pick EU or US.")
+gender = input("Select your gender: ")
+if gender == "Female":
+    exit("Great! You get bonus aperol. Thank you for ordering with us. Enjoy your day!")
+else:
+    exit("Sorry, no bonuses here. Thank you for ordering with us. Enjoy your day!")
