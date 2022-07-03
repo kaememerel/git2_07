@@ -1,9 +1,13 @@
 region = input("Select your region (EU/US): ")
 if region == "US":
-    age = input("Write your age: ")
+    age = input("Type your age: ")
     if age.isdigit() == False:
         exit("Age has to be a number!")
     age = int(age)
+    while age > 120:
+        print("Come on, your real age. Let's try again.")
+        age = input("Type your age: ")
+        age = int(age)
     if age >= 21 and age <= 50:
         drink = input("Welcome to 'World's Alcohols'. Please, select your drink: ")
         print(f"You selected {drink}. It will be served within 10 minutes.")
@@ -11,15 +15,17 @@ if region == "US":
         print("Welcome to 'World's Alcohols'. Please, be reminded that in your age alcoholic drinks are harmful.")
         drink = input("If you wish to order anyway, please, select your drink: ")
         print(f"You selected {drink}. It will be served within 10 minutes.")
-    elif age > 120:
-        exit("Come on, your real age. Let's try again.")
     else:
         exit("You are too young for alcohol!")
 elif region == "EU":
-    age = input("Write your age: ")
+    age = input("Type your age: ")
     if age.isdigit() == False:
         exit("Age has to be a number!")
     age = int(age)
+    while age > 120:
+        print("Come on, your real age. Let's try again.")
+        age = input("Type your age: ")
+        age = int(age)
     if age >= 18 and age <= 50:
         drink = input("Welcome to 'World's Alcohols'. Please, select your drink: ")
         print(f"You selected {drink}. It will be served within 10 minutes.")
@@ -27,8 +33,6 @@ elif region == "EU":
         print("Welcome to 'World's Alcohols'. Please, be reminded that in your age alcoholic drinks are harmful.")
         drink = input("If you wish to order anyway, please, select your drink: ")
         print(f"You selected {drink}. It will be served within 10 minutes.")
-    elif age > 120:
-        exit("Come on, your real age. Let's try again.")
     else:
         exit("You are too young for alcohol!")
 else:
